@@ -1,6 +1,6 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InfoMedica.aspx.cs" Inherits="ProyectoEstancia.InformacionMedica.InfoMedica" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-   <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -91,6 +91,9 @@
             </div>
             <div class="col-md-4">
                 <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click"  />
+            </div>
+            <div class="col-md-4">
+                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click"   />
             </div>
             
         </div>
