@@ -79,12 +79,5 @@
             <asp:SqlDataSource runat="server" ID="SqlDataSourceReporte" ConnectionString='<%$ ConnectionStrings:DefaultConnection %>' SelectCommand="SELECT id, fecha, alertas FROM ReporteMedico"></asp:SqlDataSource>
         
         </div>
-
-
-   
-
-
-     
-
 </body>
 </asp:Content>
