@@ -1,4 +1,50 @@
-ax-width: 100px;
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contactos.aspx.cs" Inherits="ProyectoEstancia.Contactos.Contactos" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+     <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación - Contactos</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #0b1b4a;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        .contact {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            color: aliceblue;
+        }
+
+        .contact img {
+            max-width: 100px;
             max-height: 100px;
             border-radius: 50%;
             margin-right: 20px;
@@ -87,4 +133,3 @@ ax-width: 100px;
  </body>
 </html>
 </asp:Content>
-
