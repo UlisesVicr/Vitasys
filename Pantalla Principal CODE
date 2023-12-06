@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ProyectoEstancia.Principal2.proyectorose.Index2" %>
+<%@ Page Title="Home" Language="C#"    MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ProyectoEstancia.Principal2.proyectorose.Index2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!DOCTYPE html>
 <html lang="es">
@@ -25,21 +25,23 @@
 
         <div id="problema-detectado" style="color: red;">...</div>
 
-       <table id="registro"></table>
-        <div>
-            <button ID="BtnGuardar" runat="server" Text="Guardar Historial" OnClick="BtnGuardar_Click"> </button>
-           
-        </div>
+       <ul id="registro"></ul>
+     
+
+      
+       
     </div>
 
 
             <script>
+                
+
 
                 function actualizarDatosSalud() {
                     //var problemaDetectadoElement = document.getElementById('problema-detectado');
 
                     // Simulación de datos de salud aleatorios
-                    var temperatura = parseFloat((Math.random() * 10 + 35).toFixed(1));
+                    var temperatura = parseFloat((Math.random() * 10 + 30).toFixed(1));
                     //var temperatura = 40;
                     var pulso = Math.floor(Math.random() * 120 + 60);
                     //var pulso = 101;
@@ -85,7 +87,7 @@
                     const now = new Date();
                     const horaActual = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
 
-
+                   
                     //Alerta Temperatura
                     if (temperaturaElement.innerHTML < 35 || temperaturaElement.innerHTML > 38.7) {
                         problemaDetectadoElement.innerHTML = '¡ALERTA! Temperatura Inestable';
@@ -95,6 +97,8 @@
                         registroItem.textContent = `Hora: ${horaActual}, Temperatura: ${temperaturaElement.innerHTML}`;
                         registroElement.appendChild(registroItem);
 
+
+
                        
 
                         //Alerta Pulso
@@ -102,13 +106,12 @@
                     } else
                         if (pulsoElement.innerHTML < 60 || pulsoElement.innerHTML > 100) { //cambio en pulso
                             problemaDetectadoElement.innerHTML = '¡ALERTA! Pulso Inestable.';
-
                             // Registrar el cambio junto con la hora
                             const registroItem = document.createElement('li');
                             registroItem.textContent = `Hora: ${horaActual}, Pulso: ${pulsoElement.innerHTML}`;
                             registroElement.appendChild(registroItem);
 
-                         
+                           
 
 
                             //Alerta Frecuencia Respiratoria
@@ -116,12 +119,10 @@
                             if (frecuenciaRespiratoriaElement.innerHTML > 20 || frecuenciaRespiratoriaElement.innerHTML < 12) { //cambio en pulso
                                 problemaDetectadoElement.innerHTML = '¡ALERTA! Frecuencia inestable.';
 
-
                                 // Registrar el cambio junto con la hora
                                 const registroItem = document.createElement('li');
                                 registroItem.textContent = `Hora: ${horaActual}, FrecuenciaR: ${frecuenciaRespiratoriaElement.innerHTML}`;
                                 registroElement.appendChild(registroItem);
-
 
                           
 
@@ -134,7 +135,6 @@
                                     const registroItem = document.createElement('li');
                                     registroItem.textContent = `Hora: ${horaActual}, PresionArt: ${presionArterialElement.innerHTML}`;
                                     registroElement.appendChild(registroItem);
-
                                    
                                 } else {
                                     // No hay cambios
@@ -146,8 +146,13 @@
                 setInterval(verificarCambios, 10000);  // Cambié el intervalo a 10000 ms (10 segundos) para fines de demostración
                 actualizarDatosSalud();
 
-            </script>
+
+
+               
+                
+    </script>
 </body>
 </html>
 
 </asp:Content>
+
